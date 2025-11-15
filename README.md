@@ -1,5 +1,6 @@
 # SIMULATION-OF-AUTOCORRELATION-AND-PSD-USING-SCILAB-1
-
+# NAME : NABISHA A
+# REG NO : 212223060177
 __AIM:__
 
 Write a program for Autocorrelation and PSD of signals in SCILAB and verify Wiener-Khinchin relation. 
@@ -45,8 +46,32 @@ If any Error, correct it in code and execute again
 
 Verify the generated waveform using Tabulation and Model Waveform 
 
-__PROGRAM:__
+__PROGRAM:
+```
+clc 
+clear all; 
+t=0:0.01:2*pi; 
+x=sin(2*t); 
+subplot(3,2,1); 
+plot(x); 
+au=xcorr(x,x); 
+Subplot (3,2,2); 
+plot (au); 
+v=fft(au); 
+subplot(3,2,3); 
+plot(abs(v)); 
+fw=fft(x); 
+subplot(3,2,4); 
+plot(fw); 
+fw2=(abs(fw)).^2; 
+subplot(3,2,5); 
+plot(fw2);
+```
 
-__OUTPUT:__
+__OUTPUT:
+<img width="616" height="469" alt="image" src="https://github.com/user-attachments/assets/bcef6b97-3b19-4946-bbe6-ca1ba0654b39" />
 
-__RESULT:__
+
+__RESULT:
+Thus, the Autocorrelation and PSD are executed in Scilab and output is verified. 
+
